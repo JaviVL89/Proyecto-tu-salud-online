@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos/estilos_especialidades.css" />
+    <link rel="icon" href="imagenes/favicon.png" type="image/png" />
+    <title>SaludOnline</title>
+
+    <!-- Enlace al archivo CSS de Bootstrap (asegúrate de tener una conexión a Internet para cargar Bootstrap desde CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos personalizados -->
+    <style>
+      body {
+        background-color: #3498db; /* Color de fondo más claro */
+      }
+
+      .container {
+        background-color: #fff; /* Fondo blanco del contenedor */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        border-radius: 10px; /* Bordes redondeados */
+      }
+
+      h1 {
+        color: #007bff; /* Color del encabezado */
+      }
+
+      .form-control {
+        border-radius: 5px; /* Bordes redondeados para los campos de entrada */
+      }
+
+      .btn-primary {
+        background-color: #007bff; /* Fondo del botón principal */
+        border: none; /* Sin borde */
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3; /* Cambio de color al pasar el ratón */
+      }
+    </style>
+  </head>
+  <header>
+    <div class="logo">
+      <a href="principal.html">
+        <img
+          src="imagenes/logo-removebg.png"
+          alt="Logo de la empresa"
+          class="logo"
+          style="max-width: 100px"
+        />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="gestion_citas.html">Gestión de citas</a></li>
+        <li><a href="#contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="search">
+      <input type="text" placeholder="Buscar" class="search-input" />
+    </div>
+
+    <div class="social-links">
+      <a href="#" target="_blank" class="social-icon"
+        ><img src="imagenes/icons8-facebook-48.png" alt="Facebook"
+      /></a>
+      <a href="#" target="_blank" class="social-icon"
+        ><img src="imagenes/icons8-twitterx-50.png" alt="Twitter"
+      /></a>
+      <a href="#" target="_blank" class="social-icon"
+        ><img src="imagenes/icons8-instagram-48.png" alt="Instagram"
+      /></a>
+      <!-- Añade más enlaces de redes sociales según sea necesario -->
+    </div>
+  </header>
+
+  <body class="text-center">
+    <div class="container mt-5 p-4">
+      <h1 class="mb-4">Gestión de citas</h1>
+
+      <!-- Formulario de Reserva -->
+      <form action="pagina_pago.html" method="post" class="mx-auto col-md-6">
+        <!-- Campo de Nombre -->
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required />
+        </div>
+
+        <!-- Campo de Apellidos -->
+        <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="apellidos" name="apellidos" required />
+        </div>
+
+        <!-- Campo de Correo -->
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="correo" name="correo" required />
+        </div>
+
+        <!-- Campo de Especialidad -->
+        <div class="mb-3">
+          <label for="especialidad" class="form-label">Especialidad</label>
+          <select class="form-select" id="especialidad" name="especialidad" required>
+            <option value="" disabled selected>Seleccione una especialidad</option>
+            <option value="especialidad1">MEDICINA GENERAL</option>
+            <option value="especialidad2">ALERGOLOGÍA</option>
+            <option value="especialidad3">DERMATOLOGÍA</option>
+            <option value="especialidad3">CARDIOLOGÍA</option>
+            <option value="especialidad3">OFTALMOLOGÍA</option>
+            <option value="especialidad3">OTORRINOLARINGOLOGIÍA</option>
+            <option value="especialidad3">ENDOCRINOLOGÍA Y NUTRICIÓN</option>
+            <option value="especialidad3">FISIOTERAPIA</option>
+          </select>
+        </div>
+
+        <!-- Campo de Fecha -->
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha</label>
+          <input type="date" class="form-control" id="fecha" name="fecha" required />
+        </div>
+
+        <!-- Campo de Hora (depende de la fecha) -->
+        <div class="mb-3">
+          <label for="hora" class="form-label">Hora</label>
+          <select class="form-select" id="hora" name="hora" required disabled>
+            <option value="" disabled selected>Seleccione una fecha primero</option>
+          </select>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-3">
+            <label for="numero_tarjeta" class="form-label">Número de Tarjeta:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="numero_tarjeta"
+              name="numero_tarjeta"
+              required
+            />
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label for="fecha_caducidad" class="form-label">Caducidad:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fecha_caducidad"
+              name="fecha_caducidad"
+              required
+            />
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label for="cvv" class="form-label">CVV:</label>
+            <input type="text" class="form-control" id="cvv" name="cvv" required />
+          </div>
+        </div>
+
+        <!-- Botón de Reservar -->
+        <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+      </form>
+    </div>
+
+    <!-- Script para habilitar/deshabilitar el campo de hora según la fecha seleccionada -->
+    <script>
+      document.getElementById("fecha").addEventListener("change", function () {
+        // Obtener la fecha seleccionada
+        var selectedDate = this.value;
+
+        // Obtener el campo de hora
+        var horaField = document.getElementById("hora");
+
+        // Habilitar/deshabilitar el campo de hora según si se seleccionó una fecha
+        horaField.disabled = !selectedDate;
+
+        // Limpiar las opciones existentes en el campo de hora
+        horaField.innerHTML =
+          '<option value="" disabled selected>Selecciona una fecha primero</option>';
+
+        // Agregar opciones de hora (puedes personalizar según tus necesidades)
+        if (selectedDate) {
+          // Agrega opciones de hora aquí (ejemplo: de 9:00 a 17:00)
+          for (var i = 9; i <= 17; i++) {
+            horaField.innerHTML += '<option value="' + i + ':00">' + i + ":00</option>";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

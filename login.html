@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos/estilos_login.css" />
+    <link rel="icon" href="imagenes/favicon.png" type="image/png" />
+    <title>Login / Registro</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <ul class="tab-group">
+          <li class="tab active" id="login-tab"><a href="#login">Iniciar Sesión</a></li>
+          <li class="tab" id="register-tab"><a href="#register">Registro</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- Inicio de Sesión -->
+          <div id="login">
+            <form>
+              <div class="form-group">
+                <label for="loginUsername">Usuario</label>
+                <input type="text" id="loginUsername" />
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Contraseña</label>
+                <input type="password" id="loginPassword" />
+              </div>
+              <button type="submit" class="btn">Iniciar Sesión</button>
+            </form>
+          </div>
+
+          <!-- Registro -->
+          <div id="register">
+            <form>
+              <div class="form-group">
+                <label for="registerName">Nombre Completo</label>
+                <input type="text" id="registerName" />
+              </div>
+              <div class="form-group">
+                <label for="registerUsername">Usuario</label>
+                <input type="text" id="registerUsername" />
+              </div>
+              <div class="form-group">
+                <label for="registerEmail">Correo Electrónico</label>
+                <input type="email" id="registerEmail" />
+              </div>
+              <div class="form-group">
+                <label for="registerPassword">Contraseña</label>
+                <input type="password" id="registerPassword" />
+              </div>
+              <button type="submit" class="btn">Registrarse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("login-tab").addEventListener("click", function () {
+        document.getElementById("register").style.display = "none";
+        document.getElementById("login").style.display = "block";
+        document.getElementById("login-tab").classList.add("active");
+        document.getElementById("register-tab").classList.remove("active");
+      });
+
+      document.getElementById("register-tab").addEventListener("click", function () {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("register").style.display = "block";
+        document.getElementById("register-tab").classList.add("active");
+        document.getElementById("login-tab").classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
