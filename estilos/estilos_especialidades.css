@@ -22,12 +22,15 @@ nav ul {
 
 nav ul li {
   margin-right: 20px;
+  margin-top: 20px;
+  font-size: large;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  font-size: large;
 }
 
 main {
@@ -90,9 +93,9 @@ nav a {
 }
 
 .social-icon img {
-  width: 30px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+  width: 30px;
   height: 30px;
-  border-radius: 50%; /* Para hacer las imágenes redondas, ajusta según sea necesario */
+  border-radius: 50%;
 }
 ul {
   list-style-type: none;
@@ -104,7 +107,7 @@ li {
   padding-left: 30px; /* Espacio para el icono */
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 20px 20px; /* Ajusta el tamaño según sea necesario */
+  background-size: 20px 20px;
 }
 
 .icon-medicina-general {
@@ -114,31 +117,31 @@ li {
 
 .icon-alerologia {
   background-image: url("../imagenes/icons8-pluma-de-insulina-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+  background-size: 20px;
 }
 .icon-dermatologia {
   background-image: url("../imagenes/icons8-dermatología-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+  background-size: 20px;
 }
 .icon-cardiologia {
   background-image: url("../imagenes/icons8-corazón-con-pulso-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+  background-size: 20px;
 }
 .icon-oftalmologia {
-  background-image: url("../imagenes/icons8-medicina-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+  background-image: url("../imagenes/icons8-oftalmología-48.png");
+  background-size: 20px;
 }
 .icon-otorrinolaringologia {
-  background-image: url("../imagenes/icons8-oftalmología-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+  background-image: url("../imagenes/icons8-emoji-de-oreja-48.png");
+  background-size: 20px;
 }
 .icon-endocrino_nutricion {
   background-image: url("../imagenes/icons8-calculadora-de-calorías-de-alimentos-saludables-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+  background-size: 20px;
 }
 .icon-fisioterapia {
   background-image: url("../imagenes/icons8-fisioterapia-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+  background-size: 20px;
 }
 
 footer {

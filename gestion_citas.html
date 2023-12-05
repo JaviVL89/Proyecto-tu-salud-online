@@ -77,7 +77,6 @@
       <a href="#" target="_blank" class="social-icon"
         ><img src="imagenes/icons8-instagram-48.png" alt="Instagram"
       /></a>
-      <!-- Añade más enlaces de redes sociales según sea necesario -->
     </div>
   </header>
 
@@ -85,88 +84,136 @@
     <div class="container mt-5 p-4">
       <h1 class="mb-4">Gestión de citas</h1>
 
-      <!-- Formulario de Reserva -->
-      <form action="pagina_pago.html" method="post" class="mx-auto col-md-6">
-        <!-- Campo de Nombre -->
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" required />
-        </div>
-
-        <!-- Campo de Apellidos -->
-        <div class="mb-3">
-          <label for="apellidos" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" id="apellidos" name="apellidos" required />
-        </div>
-
-        <!-- Campo de Correo -->
-        <div class="mb-3">
-          <label for="correo" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="correo" name="correo" required />
-        </div>
-
-        <!-- Campo de Especialidad -->
-        <div class="mb-3">
-          <label for="especialidad" class="form-label">Especialidad</label>
-          <select class="form-select" id="especialidad" name="especialidad" required>
-            <option value="" disabled selected>Seleccione una especialidad</option>
-            <option value="especialidad1">MEDICINA GENERAL</option>
-            <option value="especialidad2">ALERGOLOGÍA</option>
-            <option value="especialidad3">DERMATOLOGÍA</option>
-            <option value="especialidad3">CARDIOLOGÍA</option>
-            <option value="especialidad3">OFTALMOLOGÍA</option>
-            <option value="especialidad3">OTORRINOLARINGOLOGIÍA</option>
-            <option value="especialidad3">ENDOCRINOLOGÍA Y NUTRICIÓN</option>
-            <option value="especialidad3">FISIOTERAPIA</option>
-          </select>
-        </div>
-
-        <!-- Campo de Fecha -->
-        <div class="mb-3">
-          <label for="fecha" class="form-label">Fecha</label>
-          <input type="date" class="form-control" id="fecha" name="fecha" required />
-        </div>
-
-        <!-- Campo de Hora (depende de la fecha) -->
-        <div class="mb-3">
-          <label for="hora" class="form-label">Hora</label>
-          <select class="form-select" id="hora" name="hora" required disabled>
-            <option value="" disabled selected>Seleccione una fecha primero</option>
-          </select>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 mb-3">
-            <label for="numero_tarjeta" class="form-label">Número de Tarjeta:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="numero_tarjeta"
-              name="numero_tarjeta"
-              required
-            />
+      <div id="formularioContainer">
+        <!-- Formulario de Reserva -->
+        <form id="reservaForm" action="#" method="post" class="mx-auto col-md-6">
+          <!-- Campo de Nombre -->
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required />
           </div>
 
-          <div class="col-md-3 mb-3">
-            <label for="fecha_caducidad" class="form-label">Caducidad:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="fecha_caducidad"
-              name="fecha_caducidad"
-              required
-            />
+          <!-- Campo de Apellidos -->
+          <div class="mb-3">
+            <label for="apellidos" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos" name="apellidos" required />
           </div>
 
-          <div class="col-md-3 mb-3">
-            <label for="cvv" class="form-label">CVV:</label>
-            <input type="text" class="form-control" id="cvv" name="cvv" required />
+          <!-- Campo de Correo -->
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" required />
           </div>
-        </div>
 
-        <!-- Botón de Reservar -->
-        <button type="submit" class="btn btn-primary btn-block">Reservar</button>
-      </form>
+          <!-- Campo de Especialidad -->
+          <div class="mb-3">
+            <label for="especialidad" class="form-label">Especialidad</label>
+            <select class="form-select" id="especialidad" name="especialidad" required>
+              <option value="" disabled selected>Seleccione una especialidad</option>
+              <option value="Medicina general">MEDICINA GENERAL</option>
+              <option value="Alergología">ALERGOLOGÍA</option>
+              <option value="Dermatología">DERMATOLOGÍA</option>
+              <option value="Cardiología">CARDIOLOGÍA</option>
+              <option value="Oftalmología">OFTALMOLOGÍA</option>
+              <option value="Otorrinolaringología">OTORRINOLARINGOLOGÍA</option>
+              <option value="Endocrinologia y nutrición">ENDOCRINOLOGÍA Y NUTRICIÓN</option>
+              <option value="Fisioterapia">FISIOTERAPIA</option>
+            </select>
+          </div>
+
+          <!-- Campo de Fecha -->
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required />
+          </div>
+
+          <!-- Campo de Hora (depende de la fecha) -->
+          <div class="mb-3">
+            <label for="hora" class="form-label">Hora</label>
+            <select class="form-select" id="hora" name="hora" required disabled>
+              <option value="" disabled selected>Seleccione una fecha primero</option>
+            </select>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-3">
+              <label for="numero_tarjeta" class="form-label">Número de Tarjeta:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="numero_tarjeta"
+                name="numero_tarjeta"
+                required
+              />
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="fecha_caducidad" class="form-label">Caducidad:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fecha_caducidad"
+                name="fecha_caducidad"
+                required
+              />
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="cvv" class="form-label">CVV:</label>
+              <input type="text" class="form-control" id="cvv" name="cvv" required />
+            </div>
+          </div>
+
+          <!-- Botón de Reservar -->
+          <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+        </form>
+      </div>
+
+      <div id="reservaInfoContainer" style="display: none"></div>
     </div>
+    <script>
+      document.getElementById("reservaForm").addEventListener("submit", function (event) {
+        // Evitar el envío del formulario predeterminado
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        var nombre = document.getElementById("nombre").value;
+        var apellidos = document.getElementById("apellidos").value;
+        var correo = document.getElementById("correo").value;
+        var especialidad = document.getElementById("especialidad").value;
+        var fecha = document.getElementById("fecha").value;
+        var hora = document.getElementById("hora").value;
+
+        // Construir el mensaje de confirmación con estilos de Bootstrap
+        var mensaje =
+          '<div class="alert alert-success" role="alert">' +
+          '<h4 class="alert-heading">Reserva confirmada</h4>' +
+          '<p class="mb-0">Nombre: <strong>' +
+          nombre +
+          " " +
+          apellidos +
+          "</strong></p>" +
+          '<p class="mb-0">Correo Electrónico: <strong>' +
+          correo +
+          "</strong></p>" +
+          '<p class="mb-0">Especialidad: <strong>' +
+          especialidad +
+          "</strong></p>" +
+          '<p class="mb-0">Fecha: <strong>' +
+          fecha +
+          "</strong></p>" +
+          '<p class="mb-0">Hora: <strong>' +
+          hora +
+          "</strong></p>" +
+          "</div>";
+
+        // Ocultar el contenedor del formulario y mostrar el contenedor de la información de la reserva
+        document.getElementById("formularioContainer").style.display = "none";
+        document.getElementById("reservaInfoContainer").style.display = "block";
+
+        // Mostrar el mensaje en el elemento con id "reservaInfoContainer"
+        document.getElementById("reservaInfoContainer").innerHTML = mensaje;
+      });
+    </script>
 
     <!-- Script para habilitar/deshabilitar el campo de hora según la fecha seleccionada -->
     <script>
@@ -184,9 +231,8 @@
         horaField.innerHTML =
           '<option value="" disabled selected>Selecciona una fecha primero</option>';
 
-        // Agregar opciones de hora (puedes personalizar según tus necesidades)
+        // Agregar opciones de hora
         if (selectedDate) {
-          // Agrega opciones de hora aquí (ejemplo: de 9:00 a 17:00)
           for (var i = 9; i <= 17; i++) {
             horaField.innerHTML += '<option value="' + i + ':00">' + i + ":00</option>";
           }
