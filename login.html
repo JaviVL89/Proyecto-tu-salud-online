@@ -3,74 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilos/estilos_login.css" />
+    <link rel="stylesheet" href="estilos/estilos_especialidades.css" />
     <link rel="icon" href="imagenes/favicon.png" type="image/png" />
-    <title>Login / Registro</title>
+    <title>Login - CitaSalud</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url("imagenes/login.jpg");
+      }
+
+      .login-container {
+        max-width: 400px;
+        margin: auto;
+        margin-top: 100px;
+        padding: 20px;
+        border: 1px solid #3f87ce;
+        border-radius: 8px;
+        background-color: #ffffff;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .forgot-password {
+        text-align: right;
+      }
+
+      .register-link {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
   </head>
+  <header>
+    <div class="logo">
+      <a href="principal.html">
+        <img
+          src="imagenes/logo-removebg.png"
+          alt="Logo de la empresa"
+          class="logo"
+          style="max-width: 100px"
+        />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="gestion_citas.html">Gestión de citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="search">
+      <input type="text" placeholder="Buscar" class="search-input" />
+    </div>
+
+    <div class="social-links">
+      <a href="#" target="_blank" class="social-icon"
+        ><img src="imagenes/icons8-facebook-48.png" alt="Facebook"
+      /></a>
+      <a href="#" target="_blank" class="social-icon"
+        ><img src="imagenes/icons8-twitterx-50.png" alt="Twitter"
+      /></a>
+      <a href="#" target="_blank" class="social-icon"
+        ><img src="imagenes/icons8-instagram-48.png" alt="Instagram"
+      /></a>
+    </div>
+  </header>
   <body>
     <div class="container">
-      <div class="form-container">
-        <ul class="tab-group">
-          <li class="tab active" id="login-tab"><a href="#login">Iniciar Sesión</a></li>
-          <li class="tab" id="register-tab"><a href="#register">Registro</a></li>
-        </ul>
-
-        <div class="tab-content">
-          <!-- Inicio de Sesión -->
-          <div id="login">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="login-container">
+            <h2 class="text-center">Iniciar Sesión</h2>
             <form>
-              <div class="form-group">
-                <label for="loginUsername">Usuario</label>
-                <input type="text" id="loginUsername" />
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required />
               </div>
-              <div class="form-group">
-                <label for="loginPassword">Contraseña</label>
-                <input type="password" id="loginPassword" />
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
               </div>
-              <button type="submit" class="btn">Iniciar Sesión</button>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                <label class="form-check-label" for="rememberMe">Recordarme</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+              <div class="forgot-password">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+              </div>
             </form>
           </div>
-
-          <!-- Registro -->
-          <div id="register">
+        </div>
+        <div class="col-md-6">
+          <div class="login-container">
+            <h2 class="text-center">Regístrate</h2>
             <form>
-              <div class="form-group">
-                <label for="registerName">Nombre Completo</label>
-                <input type="text" id="registerName" />
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Correo Electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="registerEmail"
+                  name="registerEmail"
+                  required
+                />
               </div>
-              <div class="form-group">
-                <label for="registerUsername">Usuario</label>
-                <input type="text" id="registerUsername" />
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="registerPassword"
+                  name="registerPassword"
+                  required
+                />
               </div>
-              <div class="form-group">
-                <label for="registerEmail">Correo Electrónico</label>
-                <input type="email" id="registerEmail" />
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                />
               </div>
-              <div class="form-group">
-                <label for="registerPassword">Contraseña</label>
-                <input type="password" id="registerPassword" />
-              </div>
-              <button type="submit" class="btn">Registrarse</button>
+              <button type="submit" class="btn btn-success btn-block">Registrarse</button>
             </form>
+            <div class="register-link"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      document.getElementById("login-tab").addEventListener("click", function () {
-        document.getElementById("register").style.display = "none";
-        document.getElementById("login").style.display = "block";
-        document.getElementById("login-tab").classList.add("active");
-        document.getElementById("register-tab").classList.remove("active");
-      });
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-      document.getElementById("register-tab").addEventListener("click", function () {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("register").style.display = "block";
-        document.getElementById("register-tab").classList.add("active");
-        document.getElementById("login-tab").classList.remove("active");
-      });
-    </script>
+    <footer class="mt-5 text-center">
+      <p>&copy; 2023 CitaSalud | Todos los derechos reservados</p>
+    </footer>
   </body>
 </html>
