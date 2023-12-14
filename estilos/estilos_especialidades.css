@@ -98,51 +98,27 @@ nav a {
   height: 30px;
   border-radius: 50%;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+#especialidadesCarrusel {
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
 }
 
-li {
-  margin-bottom: 10px;
-  padding-left: 30px; /* Espacio para el icono */
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 20px 20px;
+.carousel-inner {
+  border-radius: 15px; /* Agrega bordes redondeados al carrusel */
 }
 
-.icon-medicina-general {
-  background-image: url("../imagenes/icons8-medicina-48.png");
-  background-size: 20px; /* Ruta de la imagen para Medicina General */
+.carousel-item img {
+  width: 100%; /* Haz que las imágenes del carrusel ocupen todo el ancho */
+  border-radius: 15px; /* Agrega bordes redondeados a las imágenes */
 }
 
-.icon-alerologia {
-  background-image: url("../imagenes/icons8-pluma-de-insulina-48.png");
-  background-size: 20px;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #3575fe; /* Color de fondo de los controles del carrusel */
 }
-.icon-dermatologia {
-  background-image: url("../imagenes/icons8-dermatología-48.png");
-  background-size: 20px;
-}
-.icon-cardiologia {
-  background-image: url("../imagenes/icons8-corazón-con-pulso-48.png");
-  background-size: 20px;
-}
-.icon-oftalmologia {
-  background-image: url("../imagenes/icons8-oftalmología-48.png");
-  background-size: 20px;
-}
-.icon-otorrinolaringologia {
-  background-image: url("../imagenes/icons8-emoji-de-oreja-48.png");
-  background-size: 20px;
-}
-.icon-endocrino_nutricion {
-  background-image: url("../imagenes/icons8-calculadora-de-calorías-de-alimentos-saludables-48.png");
-  background-size: 20px;
-}
-.icon-fisioterapia {
-  background-image: url("../imagenes/icons8-fisioterapia-48.png");
-  background-size: 20px;
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Ajusta el ancho de los controles según sea necesario */
 }
 
 footer {
