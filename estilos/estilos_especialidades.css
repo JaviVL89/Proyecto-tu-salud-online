@@ -76,12 +76,12 @@ nav a {
 
 .search-input {
   flex: 1;
-  padding: 10px; /* Ajusta el espaciado según tus necesidades */
-  border: 1px solid #ccc; /* Ajusta el estilo del borde según tus necesidades */
-  border-radius: 20px; /* Ajusta el radio de borde para hacerlo redondeado */
-  background: #fff url("../imagenes/icons8-lupa-30.png") no-repeat right center; /* Ruta de la imagen de la lupa */
-  background-size: 20px; /* Ajusta el tamaño de la imagen de la lupa */
-  outline: none; /* Elimina el contorno en el enfoque del campo de búsqueda */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff url("../imagenes/icons8-lupa-30.png") no-repeat right center;
+  background-size: 20px;
+  outline: none;
 }
 .social-links {
   display: flex;
@@ -99,30 +99,100 @@ nav a {
   border-radius: 50%;
 }
 #especialidadesCarrusel {
-  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  margin-top: 20px;
 }
 
 .carousel-inner {
-  border-radius: 15px; /* Agrega bordes redondeados al carrusel */
+  border-radius: 15px;
 }
 
 .carousel-item img {
-  width: 100%; /* Haz que las imágenes del carrusel ocupen todo el ancho */
-  border-radius: 15px; /* Agrega bordes redondeados a las imágenes */
+  width: 100%;
+  border-radius: 15px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #3575fe; /* Color de fondo de los controles del carrusel */
+  background-color: #3575fe;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%; /* Ajusta el ancho de los controles según sea necesario */
+  width: 5%;
 }
 
 footer {
   background-color: #f0f0f0;
   padding: 10px;
   text-align: center;
+}
+
+body {
+  background-image: url("imagenes/login.jpg");
+}
+
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #3f87ce;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  text-align: right;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+header {
+  background-color: #3575fe;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.search {
+  flex-grow: 1;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
