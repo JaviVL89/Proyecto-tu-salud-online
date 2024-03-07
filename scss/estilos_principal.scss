@@ -1,0 +1,16 @@
+@import "_variables";
+@import "_mixins";
+@import "_header";
+@import "_nav";
+@import "_main";
+@import "_search";
+@import "_social";
+@import "_footer";
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,35 @@
+/* estilos para los botones */
+button {
+  background-color: #3498db; /* color de fondo */
+  border: none;
+  border-radius: 15px;
+  color: white; /* color del texto */
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* efecto de transición al pasar el cursor */
+}
+
+button:hover {
+  background-color: #1d7bba; /* color de fondo al pasar el cursor */
+}
+
+/* estilos específicos para los botones de volumen */
+#volumeUpButton,
+#volumeDownButton {
+  background-color: #3498db; /* color de fondo para los botones de volumen */
+}
+
+#volumeUpButton:hover,
+#volumeDownButton:hover {
+  background-color: #1d7bba; /* color de fondo al pasar el cursor en los botones de volumen */
+}
+
+/* estilo específico para el botón de pausa */
+#pauseButton {
+  background-color: #3498db; /* color de fondo para el botón de pausa */
+}
+
+#pauseButton:hover {
+  background-color: #1d7bba; /* color de fondo al pasar el cursor en el botón de pausa */
+}

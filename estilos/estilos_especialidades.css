@@ -1,29 +1,28 @@
-body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-}
-
+/* sass/_variables.scss */
+/* sass/_variables.scss */
 header {
-  background-color: #3575fe;
+  background-color: #3498db;
   padding: 20px;
   color: #fff;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
 }
 
 nav ul li {
   margin-right: 20px;
-  margin-top: 20px;
-  font-size: large;
 }
 
 nav a {
@@ -32,65 +31,55 @@ nav a {
   font-weight: bold;
   font-size: large;
 }
+@media screen and (max-width: 768px) {
+  nav a {
+    margin: 0 10px;
+  }
+}
 
+/* sass/_variables.scss */
 main {
   background-image: url("../imagenes/especialidades.jpg");
-  border-radius: 15px;
   background-size: cover;
   background-position: center;
-  height: auto;
-  min-height: 100vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.main-content {
+main .main-content {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: justify;
   max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
+  margin-right: 700px;
   margin-bottom: 50px;
-  margin-right: 800px;
 }
-
-nav {
-  flex-grow: 1;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 15px;
+@media screen and (max-width: 768px) {
+  main .main-content {
+    margin-right: 0;
+  }
 }
 
 .search {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
-
-.search-input {
-  flex: 1;
+.search .search-input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   background: #fff url("../imagenes/icons8-lupa-30.png") no-repeat right center;
   background-size: 20px;
   outline: none;
+  width: 200px;
+  margin-top: 10px;
 }
+
 .social-links {
   display: flex;
   align-items: center;
-  margin-left: auto;
-}
-
-.social-icon {
-  margin-left: 15px;
+  gap: 10px;
 }
 
 .social-icon img {
@@ -98,101 +87,14 @@ nav a {
   height: 30px;
   border-radius: 50%;
 }
-#especialidadesCarrusel {
-  margin-top: 20px;
-}
-
-.carousel-inner {
-  border-radius: 15px;
-}
-
-.carousel-item img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #3575fe;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
 
 footer {
-  background-color: #f0f0f0;
-  padding: 10px;
-  text-align: center;
-}
-
-body {
-  background-image: url("imagenes/login.jpg");
-}
-
-.login-container {
-  max-width: 400px;
-  margin: auto;
-  margin-top: 100px;
-  padding: 20px;
-  border: 1px solid #3f87ce;
-  border-radius: 8px;
-  background-color: #ffffff;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.forgot-password {
-  text-align: right;
-}
-
-.register-link {
-  text-align: center;
-  margin-top: 20px;
-}
-
-footer {
-  background-color: #f0f0f0;
-  padding: 10px;
-  text-align: center;
   margin-top: auto;
-}
-
-header {
-  background-color: #3575fe;
+  text-align: center;
+  background-color: #f0f0f0;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-}
-
-.search {
-  flex-grow: 1;
-}
-
-.social-links {
-  display: flex;
-  gap: 10px;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+.reseñas-link {
+  font-size: 20px;
 }

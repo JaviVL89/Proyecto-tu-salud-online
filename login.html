@@ -4,80 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="estilos/estilos_especialidades.css" />
+  <link rel="stylesheet" href="estilos/estilos_login.css" />
   <link rel="icon" href="imagenes/favicon.png" type="image/png" />
   <title>Login - CitaSalud</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body {
-      background-image: url("imagenes/login.jpg");
-    }
+   
+   
 
-    .login-container {
-      max-width: 400px;
-      margin: auto;
-      margin-top: 100px;
-      padding: 20px;
-      border: 1px solid #3f87ce;
-      border-radius: 8px;
-      background-color: #ffffff;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .forgot-password {
-      text-align: right;
-    }
-
-    .register-link {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    footer {
-      background-color: #f0f0f0;
-      padding: 10px;
-      text-align: center;
-      margin-top: auto;
-    }
-
-    header {
-      background-color: #3575fe;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    .search {
-      flex-grow: 1;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 10px;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
+    
+   
   </style>
 </head>
 
@@ -108,78 +44,116 @@
     </div>
   </header>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="login-container">
-            <h2 class="text-center">Iniciar Sesión</h2>
-            <form>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" required />
+    <main>
+
+      <div class="contenedor__todo">
+          <div class="caja__trasera">
+              <div class="caja__trasera-login">
+                  <h3>¿Ya tienes una cuenta?</h3>
+                  <p>Inicia sesión para entrar en la página</p>
+                  <button id="btn__iniciar-sesion">Iniciar Sesión</button>
               </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  name="password"
-                  required
-                />
+              <div class="caja__trasera-register">
+                  <h3>¿Aún no tienes una cuenta?</h3>
+                  <p>Regístrate para que puedas iniciar sesión</p>
+                  <button id="btn__registrarse">Regístrarse</button>
               </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberMe" />
-                <label class="form-check-label" for="rememberMe">Recordarme</label>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-              <div class="forgot-password">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-              </div>
-            </form>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="login-container">
-            <h2 class="text-center">Regístrate</h2>
-            <form>
-              <div class="mb-3">
-                <label for="registerEmail" class="form-label">Correo Electrónico</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="registerEmail"
-                  name="registerEmail"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="registerPassword" class="form-label">Contraseña</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="registerPassword"
-                  name="registerPassword"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  required
-                />
-              </div>
-              <button type="submit" class="btn btn-success btn-block">Registrarse</button>
-            </form>
-            <div class="register-link"></div>
+
+          <!--formulario de login y registro-->
+          <div class="contenedor__login-register">
+              <!--login-->
+              <form action="" class="formulario__login">
+                  <h2>Iniciar Sesión</h2>
+                  <input type="text" placeholder="Correo Electronico">
+                  <input type="password" placeholder="Contraseña">
+                  <button>Entrar</button>
+              </form>
+
+              <!--registro-->
+              <form action="" class="formulario__register">
+                  <h2>Regístrarse</h2>
+                  <input type="text" placeholder="Nombre completo">
+                  <input type="text" placeholder="Correo Electronico">
+                  <input type="text" placeholder="Usuario">
+                  <input type="password" placeholder="Contraseña">
+                  <button>Regístrarse</button>
+              </form>
           </div>
-        </div>
       </div>
-    </div>
+
+  </main>
+    <script>
+      
+document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
+document.getElementById("btn__registrarse").addEventListener("click", register);
+window.addEventListener("resize", anchoPage);
+
+//variables
+var formulario_login = document.querySelector(".formulario__login");
+var formulario_register = document.querySelector(".formulario__register");
+var contenedor_login_register = document.querySelector(".contenedor__login-register");
+var caja_trasera_login = document.querySelector(".caja__trasera-login");
+var caja_trasera_register = document.querySelector(".caja__trasera-register");
+
+    //funciones
+
+function anchoPage(){
+
+    if (window.innerWidth > 850){
+        caja_trasera_register.style.display = "block";
+        caja_trasera_login.style.display = "block";
+    }else{
+        caja_trasera_register.style.display = "block";
+        caja_trasera_register.style.opacity = "1";
+        caja_trasera_login.style.display = "none";
+        formulario_login.style.display = "block";
+        contenedor_login_register.style.left = "0px";
+        formulario_register.style.display = "none";   
+    }
+}
+
+anchoPage();
+
+
+    function iniciarSesion(){
+        if (window.innerWidth > 850){
+            formulario_login.style.display = "block";
+            contenedor_login_register.style.left = "10px";
+            formulario_register.style.display = "none";
+            caja_trasera_register.style.opacity = "1";
+            caja_trasera_login.style.opacity = "0";
+        }else{
+            formulario_login.style.display = "block";
+            contenedor_login_register.style.left = "0px";
+            formulario_register.style.display = "none";
+            caja_trasera_register.style.display = "block";
+            caja_trasera_login.style.display = "none";
+        }
+    }
+
+    function register(){
+        if (window.innerWidth > 850){
+            formulario_register.style.display = "block";
+            contenedor_login_register.style.left = "410px";
+            formulario_login.style.display = "none";
+            caja_trasera_register.style.opacity = "0";
+            caja_trasera_login.style.opacity = "1";
+        }else{
+            formulario_register.style.display = "block";
+            contenedor_login_register.style.left = "0px";
+            formulario_login.style.display = "none";
+            caja_trasera_register.style.display = "none";
+            caja_trasera_login.style.display = "block";
+            caja_trasera_login.style.opacity = "1";
+        }
+}
+      </script>
+      
+    <!-- Footer -->
+    <footer class="bg-light text-center p-3">
+      <p>&copy; 2023 CitaSalud | Todos los derechos reservados</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

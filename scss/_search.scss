@@ -1,0 +1,15 @@
+.search {
+  display: flex;
+  align-items: center;
+
+  .search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #fff url("../imagenes/icons8-lupa-30.png") no-repeat right center;
+    background-size: 20px;
+    outline: none;
+    width: 200px;
+    margin-top: 10px;
+  }
+}

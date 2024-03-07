@@ -1,24 +1,24 @@
-body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  min-height: 100vh; /* Hace que el cuerpo de la página tenga al menos el 100% de la altura de la ventana del navegador */
-  display: flex;
-  flex-direction: column; /* Añadido para que el contenido se ajuste verticalmente */
-}
-
+/* sass/_variables.scss */
+/* sass/_variables.scss */
 header {
-  background-color: #3575fe;
+  background-color: #3498db;
   padding: 20px;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espacio entre elementos */
+  gap: 20px;
 }
 
 nav ul li {
@@ -31,56 +31,55 @@ nav a {
   font-weight: bold;
   font-size: large;
 }
+@media screen and (max-width: 768px) {
+  nav a {
+    margin: 0 10px;
+  }
+}
 
+/* sass/_variables.scss */
 main {
   background-image: url("../imagenes/principal.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 600px; /* Cambiado de 'height' a 'min-height' para permitir crecimiento */
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.main-content {
+main .main-content {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: justify;
   max-width: 600px;
-  margin-right: 700px; /* Ajustado para mejorar la apariencia en dispositivos más pequeños */
-  margin-bottom: 50px; /* Ajustado para mejorar la apariencia en dispositivos más pequeños */
+  margin-right: 700px;
+  margin-bottom: 50px;
 }
-
-nav {
-  flex-grow: 1;
-  text-align: center;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 10px; /* Reducido el margen para mejorar la apariencia en dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+  main .main-content {
+    margin-right: 0;
+  }
 }
 
 .search {
   display: flex;
   align-items: center;
 }
-
-.search-input {
+.search .search-input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   background: #fff url("../imagenes/icons8-lupa-30.png") no-repeat right center;
   background-size: 20px;
   outline: none;
-  width: 200px; /* Ajustado el ancho del campo de búsqueda */
+  width: 200px;
+  margin-top: 10px;
 }
 
 .social-links {
   display: flex;
   align-items: center;
-  gap: 10px; /* Reducido el espacio entre elementos para mejorar la apariencia en dispositivos más pequeños */
+  gap: 10px;
 }
 
 .social-icon img {
@@ -89,36 +88,15 @@ nav a {
   border-radius: 50%;
 }
 
-main {
-  flex-grow: 1; /* Hace que el contenido principal ocupe el espacio restante */
-}
-
 footer {
   margin-top: auto;
-  text-align: center; /* Centra el texto dentro del pie de página */
+  text-align: center;
   background-color: #f0f0f0;
   padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 0 10px;
-  }
-
-  .search-input {
-    margin-top: 10px;
-  }
-
-  .main-content {
-    margin-right: 0;
-  }
+.reseñas-link {
+  font-size: 20px;
 }
+
+/*# sourceMappingURL=estilos_principal.css.map */

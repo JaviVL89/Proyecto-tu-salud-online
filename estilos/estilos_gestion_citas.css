@@ -32,56 +32,56 @@ html {
 .dropdowns {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los desplegables y el botón */
-  margin-bottom: 20px; /* Espacio superior para separar de otros elementos */
+  align-items: center; /* centra los desplegables y el botón */
+  margin-bottom: 20px; /* espacio superior para separar de otros elementos */
   font-size: 30px;
 }
 
 .dropdown {
-  margin-bottom: 10px; /* Espacio entre desplegables */
+  margin-bottom: 10px; /* espacio entre desplegables */
   margin-top: 20px;
 }
 
-/* Estilos para el botón de reserva */
+/* estilos para el botón de reserva */
 button {
-  margin-top: 10px; /* Espacio entre el último desplegable y el botón */
-  padding: 10px 20px; /* Ajusta según sea necesario */
-  font-size: 16px; /* Ajusta según sea necesario */
+  margin-top: 10px; /* espacio entre el último desplegable y el botón */
+  padding: 10px 20px; /* ajusta según sea necesario */
+  font-size: 16px; /* ajusta según sea necesario */
   border-radius: 30px;
 }
 .logo {
-  width: 400px; /* Ajusta el tamaño según sea necesario */
+  width: 400px; /* ajusta el tamaño según sea necesario */
   margin-top: 0px;
 }
 
 .welcome-text {
   text-align: justify;
-  max-width: 100%; /* Ocupa el ancho completo del bloque */
-  font-size: 18px; /* Tamaño del texto en píxeles, ajusta según sea necesario */
+  max-width: 100%; /* ocupa el ancho completo del bloque */
+  font-size: 18px; /* tamaño del texto en píxeles, ajusta según sea necesario */
   line-height: 1.5;
 }
 
 .right-block {
-  background-image: url("../imagenes/gestion_citas.jpg"); /* Ruta de la imagen de fondo del Bloque Derecho */
+  background-image: url("../imagenes/gestion_citas.jpg"); /* ruta de la imagen de fondo del bloque derecho */
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column; /* Cambiado a columna para que los botones estén uno encima del otro */
+  flex-direction: column; /* cambiado a columna para que los botones estén uno encima del otro */
   align-items: center;
-  height: 100vh; /* Ajusta la altura del bloque derecho según tus necesidades */
-  justify-content: flex-start; /* Alinea el contenido en la parte superior */
+  height: 100vh; /* ajusta la altura del bloque derecho según tus necesidades */
+  justify-content: flex-start; /* alinea el contenido en la parte superior */
 }
 
 .navigation-buttons {
   display: flex;
   width: 95%;
-  margin-top: 20px; /* Espacio superior para separar los botones del contenido anterior */
+  margin-top: 20px; /* espacio superior para separar los botones del contenido anterior */
 }
 
 .nav-button {
   flex: 1;
-  padding: 10px; /* Aumenta el tamaño de los botones en altura */
-  margin-right: 10px; /* Espacio entre los botones */
+  padding: 10px; /* aumenta el tamaño de los botones en altura */
+  margin-right: 10px; /* espacio entre los botones */
   border: none;
   border-radius: 30px;
   background-color: #0cddac;
@@ -114,23 +114,23 @@ button {
 }
 
 .name-list {
-  list-style-type: none; /* Elimina los marcadores de lista */
+  list-style-type: none; /* elimina los marcadores de lista */
   padding: 0;
   text-align: left;
 }
 
 .name-list li {
-  font-size: 25px; /* Ajusta según sea necesario */
-  margin-bottom: 8px; /* Espacio entre nombres */
+  font-size: 25px; /* ajusta según sea necesario */
+  margin-bottom: 8px; /* espacio entre nombres */
 }
 
 .name-list a {
-  color: #ffffff; /* Hace que el texto dentro de los enlaces sea blanco */
-  text-decoration: none; /* Elimina el subrayado de los enlaces si lo deseas */
+  color: #ffffff; /* hace que el texto dentro de los enlaces sea blanco */
+  text-decoration: none; /* elimina el subrayado de los enlaces si lo deseas */
 }
 
 .name-list a:hover {
-  text-decoration: underline; /* Subraya el texto al pasar el ratón por encima si lo deseas */
+  text-decoration: underline; /* subraya el texto al pasar el ratón por encima si lo deseas */
 }
 
 .reservar-link {
@@ -143,15 +143,15 @@ button {
 }
 
 .reservar-link {
-  font-size: 20px; /* Ajusta el tamaño del texto según sea necesario */
-  padding: 10px 20px; /* Ajusta el relleno (padding) para hacer el enlace más grande */
-  display: inline-block; /* Para que el padding afecte el tamaño total del enlace */
-  text-decoration: none; /* Elimina el subrayado predeterminado */
-  background-color: #6093ca; /* Color de fondo del enlace (puedes ajustar según tus colores) */
-  color: #fff; /* Color del texto del enlace (puedes ajustar según tus colores) */
-  border-radius: 5px; /* Bordes redondeados */
+  font-size: 20px; /* justa el tamaño del texto según sea necesario */
+  padding: 10px 20px; /* ajusta el relleno (padding) para hacer el enlace más grande */
+  display: inline-block; /* para que el padding afecte el tamaño total del enlace */
+  text-decoration: none; /* elimina el subrayado predeterminado */
+  background-color: #6093ca; /* color de fondo del enlace (puedes ajustar según tus colores) */
+  color: #fff; /* color del texto del enlace (puedes ajustar según tus colores) */
+  border-radius: 5px; /* bordes redondeados */
 }
 
 .reservar-link:hover {
-  background-color: #5b9be0; /* Cambia el color de fondo al pasar el ratón sobre el enlace */
+  background-color: #5b9be0; /* cambia el color de fondo al pasar el ratón sobre el enlace */
 }

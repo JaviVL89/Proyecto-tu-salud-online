@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="estilos/estilos_index.css" />
+    <link rel="stylesheet" type="text/css" href="estilos/reproductor.css" />
+
     <link rel="icon" href="imagenes/favicon.png" type="image/png" />
     <title>CitaSalud</title>
   </head>
@@ -20,6 +22,51 @@
         </p>
       </div>
       <a href="principal.html" class="round-button">Comenzar</a>
+
+      <div class="reproductor">
+        <audio id="player">
+          <source src="audio/audio-salud-online.mp3" type="audio/mpeg" />
+          <source src="audio/audio-salud-online.mp3" type="audio/ogg" />
+        </audio>
+        <button id="playButton"><img src="imagenes/icons8-play-30.png" alt="Play" /></button>
+        <button id="pauseButton">
+          <img src="imagenes/icons8-detener-en-círculos-30.png" alt="Pause" />
+        </button>
+        <button id="volumeUpButton">
+          <img src="imagenes/icons8-subir-volumen-30.png" alt="Volume Up" />
+        </button>
+        <button id="volumeDownButton">
+          <img src="imagenes/icons8-bajar-volumen-30.png" alt="Volume Down" />
+        </button>
+      </div>
+
+      <script>
+        const player = document.getElementById("player");
+        const playButton = document.getElementById("playButton");
+        const pauseButton = document.getElementById("pauseButton");
+        const volumeUpButton = document.getElementById("volumeUpButton");
+        const volumeDownButton = document.getElementById("volumeDownButton");
+
+        playButton.addEventListener("click", () => {
+          player.play();
+        });
+
+        pauseButton.addEventListener("click", () => {
+          player.pause();
+        });
+
+        volumeUpButton.addEventListener("click", () => {
+          if (player.volume < 1.0) {
+            player.volume += 0.1;
+          }
+        });
+
+        volumeDownButton.addEventListener("click", () => {
+          if (player.volume > 0.0) {
+            player.volume -= 0.1;
+          }
+        });
+      </script>
     </div>
   </body>
 </html>

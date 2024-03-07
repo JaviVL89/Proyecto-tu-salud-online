@@ -1,0 +1,15 @@
+En esta nueva entrega del proyecto he añadido las siguientes novedades:
+
+- En la página del index se puede encontrar una descripción de audio sobre el contenido de la página.
+
+- La página de especialidades cuenta con un nuevo link debajo del carrusel de imágenes que lleva a una página de reseñas que cuenta con tres vídeos de reseñas sobre los especialistas.
+
+- Si se rellena el formulario de gestión de citas, te devolverá la información de la reserva de cita.
+
+- En la página del login se puede encontrar una animación entre el formulario de inicio de sesión y de registro.
+
+- Para no vulnerar la ley de propiedad intelectual, el uso de audio del index ha sido generado por una IA excepto el canon de pachelbel, las imágenes usadas son de libre recurso, es decir están en dominio publico, así como los vídeos de las reseñas que han sido generados por una IA.
+
+- Las medidas para mejorar la accesibilidad han sido proporcionar un texto alternativo a las imágenes con la etiqueta alt, se ha esctructurado el contenido de manera clara y coherente, el contraste de color entre el fondo y el texto ha sido lo suficiente para que sea legible, el tamaño de la fuente es ajustable y el contenido multimedia proporciona subtitulos.
+
+- Las medidas de usabilidad han sido simplificar la navegación y la estructura del sitio para que los usuarios puedan encontrar fácilmente lo que estén buscando. Ofrece una navegación intuitiva y consistente en todo el sitio con menús claros y opciones de búsqueda fácilmente accesibles. Proporciona retroalimentación inmediata cuando los usuarios realizan diferentes acciones en el sitio. Optimización del rendimiento del sitio para garantizar tiempos de carga rápidos. El diseño es compatible con dispositivos móviles y se adapta correctamente a diferentes tamaños de pantalla.
